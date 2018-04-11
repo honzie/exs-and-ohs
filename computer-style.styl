@@ -118,7 +118,7 @@ computer-square() {
 
 /* Mixin for defining a property name.
  * Properties are each an enum. 'x', 'o', or ' '. */
-compute-move(s2, s7, s6, s9, s5, s1, s4, s3, s8, c-win = false)
+compute-move(s2, s7, s6, s9, s5, s1, s4, s3, s8, computer-win = false, draw = false)
   t1-state = s1 == 'x' ? ':checked' : ':not(:checked)'
   t2-state = s2 == 'x' ? ':checked' : ':not(:checked)'
   t3-state = s3 == 'x' ? ':checked' : ':not(:checked)'
@@ -153,8 +153,13 @@ compute-move(s2, s7, s6, s9, s5, s1, s4, s3, s8, c-win = false)
     }
   }
 
-  if c-win
+  if computer-win
     .t2{ t2-state } ~ .t7{ t7-state } ~ .t6{ t6-state } ~ .t9{ t9-state } ~ .t5{ t5-state } ~ .t1{ t1-state } ~ .t4{ t4-state } ~ .t3{ t3-state } ~ .t8{ t8-state } ~ .game-over--computer {
+      display: block;
+    }
+
+  if draw
+    .t2{ t2-state } ~ .t7{ t7-state } ~ .t6{ t6-state } ~ .t9{ t9-state } ~ .t5{ t5-state } ~ .t1{ t1-state } ~ .t4{ t4-state } ~ .t3{ t3-state } ~ .t8{ t8-state } ~ .game-over--draw {
       display: block;
     }
 
@@ -397,3 +402,57 @@ compute-move('o', 'o', ' ',
 compute-move(' ', 'o', 'o',
              'x', 'o', ' ',
              'o', 'x', 'x', true);
+
+/* MOVE 4.1 */
+compute-move('x', 'o', 'x',
+             'o', 'o', 'o',
+             'o', 'x', 'x', true);
+
+compute-move('x', 'o', 'x',
+             'o', 'o', 'x',
+             'o', 'x', 'o', false, true);
+
+/* MOVE 4.2 */
+compute-move('o', 'o', 'x',
+             'x', 'o', 'x',
+             'o', 'x', 'o', true);
+
+compute-move('o', 'o', 'x',
+             'x', 'o', 'o',
+             'o', 'x', 'x', false, true);
+
+/* MOVE 4.3 */
+compute-move('x', 'o', 'x',
+             'o', 'o', 'x',
+             'o', 'x', 'o', false, true);
+
+compute-move('o', 'o', 'x',
+             'x', 'o', 'x',
+             'o', 'x', 'o', true);
+
+/* MOVE 4.4 */
+compute-move('x', 'o', 'x',
+             'o', 'o', 'o',
+             'o', 'x', 'x', true);
+
+compute-move('o', 'o', 'x',
+             'x', 'o', 'o',
+             'o', 'x', 'x', false, true);
+
+/* MOVE 4.5 */
+compute-move('x', 'o', 'x',
+             'o', 'o', 'x',
+             'o', 'x', 'o', false, true);
+
+compute-move('o', 'o', 'x',
+             'x', 'o', 'x',
+             'o', 'x', 'o', true);
+
+/* MOVE 4.6 */
+compute-move('x', 'o', 'x',
+             'o', 'o', 'o',
+             'x', 'x', 'o', true);
+
+compute-move('x', 'o', 'o',
+             'o', 'o', 'x',
+             'x', 'x', 'o', false, true);

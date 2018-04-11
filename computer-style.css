@@ -965,3 +965,249 @@ body {
 .t2:not(:checked) ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .game-over--computer {
   display: block;
 }
+/* MOVE 4.1 */
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--1,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .no-op,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--4,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--5,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--7,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--9 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--1::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .no-op::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--4::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--5::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--7::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--9::after {
+  display: block;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .game-over--computer {
+  display: block;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9::after {
+  display: block;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .game-over--draw {
+  display: block;
+}
+/* MOVE 4.2 */
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--2,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--2::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8::after {
+  display: block;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .game-over--computer {
+  display: block;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--1,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--2,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .no-op,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--4,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--5,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--7 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--1::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--2::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .no-op::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--4::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--5::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--7::after {
+  display: block;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .game-over--draw {
+  display: block;
+}
+/* MOVE 4.3 */
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9::after {
+  display: block;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .game-over--draw {
+  display: block;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--2,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--2::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8::after {
+  display: block;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .game-over--computer {
+  display: block;
+}
+/* MOVE 4.4 */
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--1,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .no-op,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--4,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--5,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--7,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--9 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--1::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .no-op::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--4::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--5::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--7::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--9::after {
+  display: block;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .game-over--computer {
+  display: block;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--1,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--2,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .no-op,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--4,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--5,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--7 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--1::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--2::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .no-op::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--4::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--5::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .board .square--7::after {
+  display: block;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:checked ~ .t8:checked ~ .game-over--draw {
+  display: block;
+}
+/* MOVE 4.5 */
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9::after {
+  display: block;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .game-over--draw {
+  display: block;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--2,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--2::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--4::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7::after,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8::after {
+  display: block;
+}
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:checked ~ .t9:checked ~ .t5:not(:checked) ~ .t1:checked ~ .t4:not(:checked) ~ .t3:checked ~ .t8:not(:checked) ~ .game-over--computer {
+  display: block;
+}
+/* MOVE 4.6 */
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--1,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--1::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9::after {
+  display: block;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:checked ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:not(:checked) ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .game-over--computer {
+  display: block;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--6,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9 {
+  pointer-events: none;
+  cursor: default;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .no-op::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--5::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--6::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--7::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--8::after,
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .board .square--9::after {
+  display: block;
+}
+.t2:checked ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:not(:checked) ~ .t1:checked ~ .t4:checked ~ .t3:checked ~ .t8:not(:checked) ~ .game-over--draw {
+  display: block;
+}
