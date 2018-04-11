@@ -1,0 +1,360 @@
+/* RESET */
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: helvetica, sans-serif;
+}
+
+/* BOARD DESIGN */
+/* Color palette: http://paletton.com/#uid=7060u0knYpBepzHj-sHrel1vEg6 */
+.board__row {
+  list-style: none;
+  text-align: center;
+}
+
+.square {
+  display: inline-block;
+  width: 100px;
+  height: 100px;
+  margin: 5px;
+  background: #f4f4f4;
+  overflow: hidden;
+}
+
+/* Set up before and after states.
+ * Before is X's (player),
+ * After is O's (computer). */
+.square::after,
+.square::before {
+  display: block;
+  width: 100px;
+  height: 100px;
+  font-size: 100px;
+  line-height: 100px;
+  display: none;
+}
+
+.square::after {
+  content: 'O';
+  color: #CC4833;
+}
+
+.square::before {
+  content: 'X';
+  color: #236B7F;
+}
+
+/* TRIGGER DESIGN */
+/* Basically, hide the radio button. */
+.trigger {
+  /*display: none;*/
+}
+
+/* INTERACTIVITY */
+/* Start a counter to see how many moves have been made. */
+body {
+  counter-reset: moves;
+}
+
+/* TODO: REMOVE */
+.todo-remove::after {
+  content: "Moves: " counter(moves);
+}
+
+/* PLAYER INTERACTIVITY */
+/* Begin by showing the user they can interact with the square. */
+.square {
+  cursor: pointer;
+}
+
+.square:hover,
+.square:focus {
+  background: #eee;
+}
+
+/* After a player has selected a square, display it as an 'X'.
+ * And remove the ability to select it again. */
+.t1:checked ~ .board .square--1,
+.t2:checked ~ .board .square--2,
+.t3:checked ~ .board .square--3,
+.t4:checked ~ .board .square--4,
+.t5:checked ~ .board .square--5,
+.t6:checked ~ .board .square--6,
+.t7:checked ~ .board .square--7,
+.t8:checked ~ .board .square--8,
+.t9:checked ~ .board .square--9 {
+  cursor: default;
+  background: #f4f4f4;
+
+  &::before {
+    display: block;
+    counter-increment: moves;
+  }
+}
+
+/* WIN STATES */
+.game-over {
+  display: none;
+}
+
+/* Human wins are easy */
+.t2:checked ~ .t7:checked ~ .t6:checked ~ .game-over--human,
+.t9:checked ~ .t5:checked ~ .t1:checked ~ .game-over--human,
+.t4:checked ~ .t3:checked ~ .t8:checked ~ .game-over--human,
+.t2:checked ~ .t9:checked ~ .t4:checked ~ .game-over--human,
+.t7:checked ~ .t5:checked ~ .t3:checked ~ .game-over--human,
+.t6:checked ~ .t1:checked ~ .t8:checked ~ .game-over--human,
+.t2:checked ~ .t5:checked ~ .t8:checked ~ .game-over--human,
+.t6:checked ~ .t5:checked ~ .t4:checked ~ .game-over--human {
+  display: block;
+}
+
+/* COMPUTER BRAINS */
+/* Order is important:
+ * 2 7 6
+ * 9 5 1
+ * 4 3 8 */
+
+/* Mixin for a computer square's properties. */
+computer-square() {
+  pointer-events: none;
+  cursor: default;
+
+  &::after {
+    display: block;
+    counter-increment: moves;
+  }
+}
+
+/* Mixin for defining a property name.
+ * Properties are each an enum. 'x', 'o', or ' '. */
+compute-move(s2, s7, s6, s9, s5, s1, s4, s3, s8)
+  t1-state = s1 == 'x' ? ':checked' : ':not(:checked)'
+  t2-state = s2 == 'x' ? ':checked' : ':not(:checked)'
+  t3-state = s3 == 'x' ? ':checked' : ':not(:checked)'
+  t4-state = s4 == 'x' ? ':checked' : ':not(:checked)'
+  t5-state = s5 == 'x' ? ':checked' : ':not(:checked)'
+  t6-state = s6 == 'x' ? ':checked' : ':not(:checked)'
+  t7-state = s7 == 'x' ? ':checked' : ':not(:checked)'
+  t8-state = s8 == 'x' ? ':checked' : ':not(:checked)'
+  t9-state = s9 == 'x' ? ':checked' : ':not(:checked)'
+
+  c1-state = s1 == 'o' ? '.square--1' : '.no-op'
+  c2-state = s2 == 'o' ? '.square--2' : '.no-op'
+  c3-state = s3 == 'o' ? '.square--3' : '.no-op'
+  c4-state = s4 == 'o' ? '.square--4' : '.no-op'
+  c5-state = s5 == 'o' ? '.square--5' : '.no-op'
+  c6-state = s6 == 'o' ? '.square--6' : '.no-op'
+  c7-state = s7 == 'o' ? '.square--7' : '.no-op'
+  c8-state = s8 == 'o' ? '.square--8' : '.no-op'
+  c9-state = s9 == 'o' ? '.square--9' : '.no-op'
+
+  .t2{ t2-state } ~ .t7{ t7-state } ~ .t6{ t6-state } ~ .t9{ t9-state } ~ .t5{ t5-state } ~ .t1{ t1-state } ~ .t4{ t4-state } ~ .t3{ t3-state } ~ .t8{ t8-state } ~ .board {
+    { c1-state },
+    { c2-state },
+    { c3-state },
+    { c4-state },
+    { c5-state },
+    { c6-state },
+    { c7-state },
+    { c8-state },
+    { c9-state } {
+      computer-square();
+    }
+  }
+
+/* MOVE 1 */
+compute-move('x', ' ', ' ',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move(' ', 'x', ' ',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move(' ', ' ', 'x',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move(' ', ' ', ' ',
+             'x', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move(' ', ' ', ' ',
+             ' ', 'x', ' ',
+             'o', ' ', ' ');
+
+compute-move(' ', ' ', ' ',
+             ' ', 'o', 'x',
+             ' ', ' ', ' ');
+
+compute-move(' ', ' ', ' ',
+             ' ', 'o', ' ',
+             'x', ' ', ' ');
+
+compute-move(' ', ' ', ' ',
+             ' ', 'o', ' ',
+             ' ', 'x', ' ');
+
+compute-move(' ', ' ', ' ',
+             ' ', 'o', ' ',
+             ' ', ' ', 'x');
+
+
+/* MOVE 2.1 */
+compute-move('x', 'x', 'o',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move('x', 'o', 'x',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move('x', ' ', ' ',
+             'x', 'o', ' ',
+             'o', ' ', ' ');
+
+compute-move('x', ' ', 'o',
+             ' ', 'o', 'x',
+             ' ', ' ', ' ');
+
+compute-move('x', ' ', ' ',
+             'o', 'o', ' ',
+             'x', ' ', ' ');
+
+compute-move('x', ' ', ' ',
+             ' ', 'o', ' ',
+             'o', 'x', ' ');
+
+compute-move('x', ' ', ' ',
+             ' ', 'o', ' ',
+             ' ', 'o', 'x');
+
+/* MOVE 2.2 */
+compute-move('o', 'x', 'x',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move('o', 'x', ' ',
+             'x', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move(' ', 'x', 'o',
+             ' ', 'o', 'x',
+             ' ', ' ', ' ');
+
+compute-move('o', 'x', ' ',
+             ' ', 'o', ' ',
+             'x', ' ', ' ');
+
+compute-move(' ', 'x', ' ',
+             ' ', 'o', ' ',
+             'o', 'x', ' ');
+
+compute-move(' ', 'x', 'o',
+             ' ', 'o', ' ',
+             ' ', ' ', 'x');
+
+/* MOVE 2.3 */
+compute-move('o', ' ', 'x',
+             'x', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move(' ', ' ', 'x',
+             ' ', 'o', 'x',
+             ' ', ' ', 'o');
+
+compute-move(' ', ' ', 'x',
+             'o', 'o', ' ',
+             'x', ' ', ' ');
+
+compute-move(' ', ' ', 'x',
+             ' ', 'o', ' ',
+             ' ', 'x', 'o');
+
+compute-move(' ', ' ', 'x',
+             ' ', 'o', 'o',
+             ' ', ' ', 'x');
+
+/* MOVE 2.4 */
+compute-move('o', ' ', ' ',
+             'x', 'o', 'x',
+             ' ', ' ', ' ');
+
+compute-move('o', ' ', ' ',
+             'x', 'o', ' ',
+             'x', ' ', ' ');
+
+compute-move(' ', ' ', ' ',
+             'x', 'o', ' ',
+             'o', 'x', ' ');
+
+compute-move(' ', ' ', ' ',
+             'x', 'o', ' ',
+             'o', ' ', 'x');
+
+/* MOVE 2.5 */
+compute-move('x', ' ', ' ',
+             ' ', 'x', ' ',
+             'o', ' ', 'o');
+
+compute-move(' ', 'x', ' ',
+             ' ', 'x', ' ',
+             'o', 'o', ' ');
+
+compute-move(' ', ' ', 'x',
+             ' ', 'x', ' ',
+             'o', ' ', 'o');
+
+compute-move(' ', ' ', ' ',
+             'x', 'x', 'o',
+             'o', ' ', ' ');
+
+compute-move(' ', ' ', ' ',
+             'o', 'x', 'x',
+             'o', ' ', ' ');
+
+compute-move(' ', 'o', ' ',
+             ' ', 'x', ' ',
+             'o', 'x', ' ');
+
+compute-move('o', ' ', ' ',
+             ' ', 'x', ' ',
+             'o', ' ', 'x');
+
+/* MOVE 2.6 */
+compute-move(' ', ' ', ' ',
+             ' ', 'o', 'x',
+             'x', ' ', 'o');
+
+compute-move(' ', ' ', ' ',
+             ' ', 'o', 'x',
+             ' ', 'x', 'o');
+
+compute-move(' ', ' ', 'o',
+             ' ', 'o', 'x',
+             ' ', ' ', 'x');
+
+/* MOVE 2.7 */
+compute-move(' ', ' ', ' ',
+             ' ', 'o', ' ',
+             'x', 'x', 'o');
+
+compute-move(' ', ' ', ' ',
+             ' ', 'o', ' ',
+             'x', 'o', 'x');
+
+/* MOVE 2.8 */
+compute-move(' ', ' ', ' ',
+             ' ', 'o', ' ',
+             'o', 'x', 'x');
+
+/*
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:checked ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:not(:checked) ~ .t8:not(:checked) ~ .board .square--2,
+.t2:not(:checked) ~ .t7:not(:checked) ~ .t6:not(:checked) ~ .t9:not(:checked) ~ .t5:checked ~ .t1:not(:checked) ~ .t4:not(:checked) ~ .t3:not(:checked) ~ .t8:not(:checked) ~ .board .square--2 {
+  computer-square();
+}
+*/
