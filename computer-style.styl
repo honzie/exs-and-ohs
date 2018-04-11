@@ -158,298 +158,155 @@ compute-move(s2, s7, s6, s9, s5, s1, s4, s3, s8, c-win = false)
       display: block;
     }
 
-/* MOVE 1 */
-compute-move('x', ' ', ' ',
-             ' ', 'o', ' ',
-             ' ', ' ', ' ');
-
-compute-move(' ', 'x', ' ',
-             ' ', 'o', ' ',
-             ' ', ' ', ' ');
-
-compute-move(' ', ' ', 'x',
-             ' ', 'o', ' ',
-             ' ', ' ', ' ');
-
+/* MOVE 0 */
 compute-move(' ', ' ', ' ',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+/* MOVE 1 */
+compute-move('x', 'o', ' ',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move('o', 'x', ' ',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move(' ', 'o', 'x',
+             ' ', 'o', ' ',
+             ' ', ' ', ' ');
+
+compute-move(' ', 'o', ' ',
              'x', 'o', ' ',
              ' ', ' ', ' ');
 
-compute-move(' ', ' ', ' ',
-             ' ', 'x', ' ',
-             'o', ' ', ' ');
-
-compute-move(' ', ' ', ' ',
+compute-move(' ', 'o', ' ',
              ' ', 'o', 'x',
              ' ', ' ', ' ');
 
-compute-move(' ', ' ', ' ',
+compute-move(' ', 'o', ' ',
              ' ', 'o', ' ',
              'x', ' ', ' ');
 
-compute-move(' ', ' ', ' ',
+compute-move(' ', 'o', ' ',
              ' ', 'o', ' ',
              ' ', 'x', ' ');
 
-compute-move(' ', ' ', ' ',
+compute-move(' ', 'o', ' ',
              ' ', 'o', ' ',
              ' ', ' ', 'x');
 
 /* MOVE 2.1 */
-compute-move('x', 'x', 'o',
-             ' ', 'o', ' ',
-             ' ', ' ', ' ');
-
 compute-move('x', 'o', 'x',
              ' ', 'o', ' ',
-             ' ', ' ', ' ');
-
-compute-move('x', ' ', ' ',
-             'x', 'o', ' ',
-             'o', ' ', ' ');
-
-compute-move('x', ' ', 'o',
-             ' ', 'o', 'x',
-             ' ', ' ', ' ');
-
-compute-move('x', ' ', ' ',
-             'o', 'o', ' ',
-             'x', ' ', ' ');
-
-compute-move('x', ' ', ' ',
-             ' ', 'o', ' ',
-             'o', 'x', ' ');
+             ' ', 'o', ' ', true);
 
 compute-move('x', 'o', ' ',
-             ' ', 'o', ' ',
-             ' ', ' ', 'x');
-
-/* MOVE 2.2 */ // TODO: UP TO HERE
-compute-move('o', 'x', 'x',
-             ' ', 'o', ' ',
-             ' ', ' ', ' ');
-
-compute-move('o', 'x', ' ',
-             'x', 'o', ' ',
-             ' ', ' ', ' ');
-
-compute-move('o', 'x', ' ',
-             ' ', 'o', 'x',
-             ' ', ' ', ' ');
-
-compute-move('o', 'x', ' ',
-             ' ', 'o', ' ',
-             'x', ' ', ' ');
-
-compute-move('o', 'x', ' ',
-             ' ', 'o', ' ',
-             ' ', 'x', ' ');
-
-compute-move('o', 'x', ' ',
-             ' ', 'o', ' ',
-             ' ', ' ', 'x');
-
-/* MOVE 2.3 */
-compute-move('o', ' ', 'x',
-             'x', 'o', ' ',
-             ' ', ' ', ' ');
-
-compute-move(' ', ' ', 'x',
-             ' ', 'o', 'x',
-             ' ', ' ', 'o');
-
-compute-move(' ', ' ', 'x',
-             'o', 'o', ' ',
-             'x', ' ', ' ');
-
-compute-move(' ', ' ', 'x',
-             ' ', 'o', ' ',
-             ' ', 'x', 'o');
-
-compute-move(' ', ' ', 'x',
-             ' ', 'o', 'o',
-             ' ', ' ', 'x');
-
-/* MOVE 2.4 */
-compute-move('o', ' ', ' ',
-             'x', 'o', 'x',
-             ' ', ' ', ' ');
-
-compute-move('o', ' ', ' ',
-             'x', 'o', ' ',
-             'x', ' ', ' ');
-
-compute-move(' ', ' ', ' ',
-             'x', 'o', ' ',
-             'o', 'x', ' ');
-
-compute-move(' ', ' ', ' ',
-             'x', 'o', ' ',
-             'o', ' ', 'x');
-
-/* MOVE 2.5 */
-compute-move('x', ' ', ' ',
-             ' ', 'x', ' ',
-             'o', ' ', 'o');
-
-compute-move(' ', 'x', ' ',
-             ' ', 'x', ' ',
-             'o', 'o', ' ');
-
-compute-move(' ', ' ', 'x',
-             ' ', 'x', ' ',
-             'o', ' ', 'o');
-
-compute-move(' ', ' ', ' ',
-             'x', 'x', 'o',
-             'o', ' ', ' ');
-
-compute-move(' ', ' ', ' ',
-             'o', 'x', 'x',
-             'o', ' ', ' ');
-
-compute-move(' ', 'o', ' ',
-             ' ', 'x', ' ',
-             'o', 'x', ' ');
-
-compute-move('o', ' ', ' ',
-             ' ', 'x', ' ',
-             'o', ' ', 'x');
-
-/* MOVE 2.6 */
-compute-move(' ', ' ', ' ',
-             ' ', 'o', 'x',
-             'x', ' ', 'o');
-
-compute-move(' ', ' ', ' ',
-             ' ', 'o', 'x',
-             ' ', 'x', 'o');
-
-compute-move(' ', ' ', 'o',
-             ' ', 'o', 'x',
-             ' ', ' ', 'x');
-
-/* MOVE 2.7 */
-compute-move(' ', ' ', ' ',
-             ' ', 'o', ' ',
-             'x', 'x', 'o');
-
-compute-move(' ', ' ', ' ',
-             ' ', 'o', ' ',
-             'x', 'o', 'x');
-
-/* MOVE 2.8 */
-compute-move(' ', ' ', ' ',
-             ' ', 'o', ' ',
-             'o', 'x', 'x');
-
-/* MOVE 3.1 */
-compute-move('x', 'x', 'o',
-             'x', 'o', ' ',
-             'o', ' ', ' ', true);
-
-compute-move('x', 'x', 'o',
-             ' ', 'o', 'x',
-             'o', ' ', ' ', true);
-
-compute-move('x', 'x', 'o',
-             'o', 'o', ' ',
-             'x', ' ', ' ');
-
-compute-move('x', 'x', 'o',
-             ' ', 'o', ' ',
-             'o', 'x', ' ', true);
-
-compute-move('x', 'x', 'o',
-             ' ', 'o', ' ',
-             'o', ' ', 'x', true);
-
-/* MOVE 3.2 */
-compute-move('x', 'o', 'x',
              'x', 'o', ' ',
              ' ', 'o', ' ', true);
 
-compute-move('x', 'o', 'x',
+compute-move('x', 'o', ' ',
              ' ', 'o', 'x',
              ' ', 'o', ' ', true);
 
-compute-move('x', 'o', 'x',
+compute-move('x', 'o', ' ',
              ' ', 'o', ' ',
              'x', 'o', ' ', true);
 
-compute-move('x', 'o', 'x',
-             ' ', 'o', 'o',
-             ' ', 'x', ' ');
+compute-move('x', 'o', ' ',
+             ' ', 'o', ' ',
+             'o', 'x', ' ');
 
-compute-move('x', 'o', 'x',
+compute-move('x', 'o', ' ',
              ' ', 'o', ' ',
              ' ', 'o', 'x', true);
 
-/* MOVE 3.3 */
-compute-move('x', 'o', 'x',
-             'x', 'o', ' ',
-             'o', ' ', ' ');
+/* MOVE 2.2 */
+compute-move('o', 'x', 'x',
+             ' ', 'o', ' ',
+             ' ', ' ', 'o', true);
 
-compute-move('x', ' ', 'o',
+compute-move('o', 'x', ' ',
+             'x', 'o', ' ',
+             ' ', ' ', 'o', true);
+
+compute-move('o', 'x', ' ',
+             ' ', 'o', 'x',
+             ' ', ' ', 'o', true);
+
+compute-move('o', 'x', ' ',
+             ' ', 'o', ' ',
+             'x', ' ', 'o', true);
+
+compute-move('o', 'x', ' ',
+             ' ', 'o', ' ',
+             ' ', 'x', 'o', true);
+
+compute-move('o', 'x', ' ',
+             ' ', 'o', ' ',
+             'o', ' ', 'x');
+
+/* MOVE 2.3 */
+compute-move(' ', 'o', 'x',
+             'x', 'o', ' ',
+             ' ', 'o', ' ', true);
+
+compute-move(' ', 'o', 'x',
+             ' ', 'o', 'x',
+             ' ', 'o', ' ', true);
+
+compute-move(' ', 'o', 'x',
+             ' ', 'o', ' ',
+             'x', 'o', ' ', true);
+
+compute-move(' ', 'o', 'x',
+             ' ', 'o', ' ',
+             'o', 'x', ' ');
+
+compute-move(' ', 'o', 'x',
+             ' ', 'o', ' ',
+             ' ', 'o', 'x', true);
+
+/* MOVE 2.4 */
+compute-move(' ', 'o', ' ',
              'x', 'o', 'x',
-             'o', ' ', ' ', true);
+             ' ', 'o', ' ', true);
 
-compute-move('x', ' ', 'o',
+compute-move(' ', 'o', ' ',
              'x', 'o', ' ',
-             'o', 'x', ' ', true);
+             'x', 'o', ' ', true);
 
-compute-move('x', ' ', 'o',
+compute-move(' ', 'o', ' ',
              'x', 'o', ' ',
-             'o', ' ', 'x', true);
+             'o', 'x', ' ');
 
-/* MOVE 3.4 */
-compute-move('x', ' ', 'o',
-             'o', 'o', 'x',
-             'x', ' ', ' ');
+compute-move(' ', 'o', ' ',
+             'x', 'o', ' ',
+             ' ', 'o', 'x', true);
 
-compute-move('x', ' ', 'o',
+/* MOVE 2.5 */
+compute-move(' ', 'o', ' ',
              ' ', 'o', 'x',
-             'o', 'x', ' ', true);
+             'x', 'o', ' ', true);
 
-compute-move('x', ' ', 'o',
+compute-move(' ', 'o', ' ',
              ' ', 'o', 'x',
-             'o', ' ', 'x', true);
+             'o', 'x', ' ');
 
-/* MOVE 3.5 */
-compute-move('x', 'x', ' ',
-             'o', 'o', 'o',
-             'x', ' ', ' ', true);
+compute-move(' ', 'o', ' ',
+             ' ', 'o', 'x',
+             ' ', 'o', 'x', true);
 
-compute-move('x', ' ', 'x',
-             'o', 'o', 'o',
-             'x', ' ', ' ', true);
-
-compute-move('x', ' ', ' ',
-             'o', 'o', 'o',
-             'x', 'x', ' ', true);
-
-compute-move('x', ' ', ' ',
-             'o', 'o', 'o',
-             'x', ' ', 'x', true);
-
-/* MOVE 3.6 */
-compute-move('x', ' ', 'o',
+/* MOVE 2.6 */
+compute-move(' ', 'o', ' ',
              ' ', 'o', ' ',
-             'o', 'x', 'x', true);
+             'x', 'x', ' ');
 
-/* MOVE 3.7 */
-compute-move('x', 'o', ' ',
-             'x', 'o', ' ',
-             ' ', 'o', 'x', true);
-
-compute-move('x', 'o', ' ',
-             ' ', 'o', 'x',
-             ' ', 'o', 'x', true);
-
-compute-move('x', 'o', ' ',
+compute-move(' ', 'o', ' ',
              ' ', 'o', ' ',
              'x', 'o', 'x', true);
 
-compute-move('x', 'o', ' ',
+/* MOVE 2.7 */
+compute-move(' ', 'o', ' ',
              ' ', 'o', ' ',
              'o', 'x', 'x');
